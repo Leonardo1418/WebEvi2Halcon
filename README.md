@@ -1,4 +1,4 @@
-## Evidence 2 — Application Logic
+## Evidence 2 - Application Logic
 
 ### Changes made
 - Laravel 11 project created with Breeze authentication
