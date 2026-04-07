@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class PhotoEvidence extends Model
 {
+    protected $table = 'photo_evidences';
+    
     protected $fillable = [
         'order_id',
         'photo_type',
