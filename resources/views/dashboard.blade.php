@@ -1,17 +1,17 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
-        </div>
-    </div>
-</x-app-layout>
+<!DOCTYPE html>
+<html>
+<head><title>Halcon - Dashboard</title></head>
+<body>
+<h1>Dashboard</h1>
+<p>Welcome, {{ auth()->user()->name }} ({{ auth()->user()->role }})</p>
+<nav>
+    <a href="{{ route('users.index') }}">Users</a> |
+    <a href="{{ route('orders.index') }}">Orders</a> |
+    <a href="{{ route('orders.archived') }}">Archived Orders</a> |
+    <form method="POST" action="{{ route('logout') }}" style="display:inline">
+        @csrf
+        <button type="submit">Logout</button>
+    </form>
+</nav>
+</body>
+</html>
